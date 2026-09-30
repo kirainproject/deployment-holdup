@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulasi Jeda | Hold Up</title>
-    <meta name="description" content="Tahan 15 detik dan jawab satu pertanyaan sebelum checkout. Barang yang kamu tunda tercatat di Jurnal Tunda.">
+    <title>Teman Jeda | Hold Up</title>
+    <meta name="description" content="Teman Jeda, obrolan simulasi yang menemanimu menimbang ulang sebelum checkout. Semua jawaban ditulis tim, bukan AI.">
     <link rel="icon" type="image/png" href="assets/logo/favicon.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Hold Up">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:title" content="Simulasi Jeda | Hold Up">
-    <meta property="og:description" content="Tahan 15 detik dan jawab satu pertanyaan sebelum checkout. Barang yang kamu tunda tercatat di Jurnal Tunda.">
+    <meta property="og:title" content="Teman Jeda | Hold Up">
+    <meta property="og:description" content="Teman Jeda, obrolan simulasi yang menemanimu menimbang ulang sebelum checkout. Semua jawaban ditulis tim, bukan AI.">
     <meta property="og:image" content="https://holdup.kirain.web.id/assets/images/og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/simulasi.css">
+    <link rel="stylesheet" href="css/teman-jeda.css">
 </head>
 
 <body class="footer-page">
@@ -53,135 +53,59 @@
                 <ul class="site-nav__list" id="site-nav-list">
                     <li><a href="index.html">Beranda</a></li>
                     <li><a href="kenapa.html">Kenapa Impulsif</a></li>
-                    <li><a href="simulasi.html" aria-current="page">Simulasi Jeda</a></li>
+                    <li><a href="simulasi.html">Simulasi Jeda</a></li>
                     <li><a href="quiz.html">Kuis Pemicu</a></li>
                     <li><a href="kalkulator.html">Kalkulator</a></li>
-                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                    <li><a href="teman-jeda.html" aria-current="page">Teman Jeda</a></li>
                 </ul>
             </nav>
         </header>
 
         <main id="utama" tabindex="-1">
 
-            <section id="tahap-awal" class="card stage enter" aria-labelledby="judul">
-                <span class="eyebrow">Simulasi jeda</span>
-                <h1 id="judul" class="title" tabindex="-1">Tahan 15 detik sebelum checkout</h1>
-                <p class="lead">Lagi ngincer sesuatu? Tulis barangnya di sini. Kamu akan diajak berhenti sebentar dan
-                    menjawab satu pertanyaan sebelum memutuskan.</p>
-
-                <p class="hint mt-5" id="pesan-akhir" role="status"></p>
-
-                <form class="mt-3" id="form-simulasi" novalidate>
-                    <fieldset>
-                        <legend>Skenario belanja</legend>
-                        <div class="chips">
-                            <input type="radio" name="skenario" id="sk-fashion" value="fashion" checked>
-                            <label for="sk-fashion">Fashion</label>
-                            <input type="radio" name="skenario" id="sk-gadget" value="gadget">
-                            <label for="sk-gadget">Gadget</label>
-                            <input type="radio" name="skenario" id="sk-skincare" value="skincare">
-                            <label for="sk-skincare">Skincare</label>
-                            <input type="radio" name="skenario" id="sk-lainnya" value="lainnya">
-                            <label for="sk-lainnya">Lainnya</label>
-                        </div>
-                    </fieldset>
-
-                    <div class="field">
-                        <label for="nama-barang">Barang yang kamu incar</label>
-                        <input class="text-input" type="text" id="nama-barang" name="nama" autocomplete="off"
-                            maxlength="60" placeholder="Sepatu sneakers putih" aria-describedby="galat">
-                    </div>
-                    <div class="field">
-                        <label for="harga-barang">Harganya</label>
-                        <div class="money">
-                            <span aria-hidden="true">Rp</span>
-                            <input type="text" inputmode="numeric" id="harga-barang" name="harga" autocomplete="off"
-                                maxlength="15" placeholder="450.000" aria-describedby="galat">
-                        </div>
-                    </div>
-                    <fieldset>
-                        <legend>Apa yang bikin kamu pengen beli?</legend>
-                        <div class="chips">
-                            <input type="radio" name="pemicu" id="pm-fomo" value="fomo" checked>
-                            <label for="pm-fomo">Lagi tren, takut ketinggalan</label>
-                            <input type="radio" name="pemicu" id="pm-urgency" value="urgency">
-                            <label for="pm-urgency">Promonya mau habis</label>
-                            <input type="radio" name="pemicu" id="pm-mood" value="mood">
-                            <label for="pm-mood">Lagi butuh hiburan</label>
-                        </div>
-                        <p class="note" id="pemicu-note" hidden>Dipilihkan dari hasil kuis pemicumu. Boleh diganti.</p>
-                    </fieldset>
-
-                    <p class="hint" id="galat" role="alert"></p>
-                    <button type="submit" class="pill pill--red mt-2">
-                        Mulai jeda
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M9 18l6-6-6-6" />
-                        </svg>
-                    </button>
-                </form>
-
-                <details>
-                    <summary>Mode teks, tanpa timer</summary>
-                    <ol class="tips" id="daftar-pertanyaan"></ol>
-                    <p class="note">Pertanyaan pertama sengaja paling depan: memikirkan alasan untuk tidak membeli
-                        terbukti menurunkan keinginan membeli (Grünzner dkk., 2025).</p>
-                </details>
-            </section>
-
-            <section id="tahap-jeda" class="card stage" aria-labelledby="jeda-title" hidden>
-                <div class="text-center">
-                    <span class="eyebrow">Jeda sebentar</span>
-                    <h2 id="jeda-title" class="section-title" tabindex="-1">Tahan dulu</h2>
-                    <p class="item-recap mt-2" id="ringkas-barang"></p>
-                </div>
-
-                <p class="count" id="angka-jeda" aria-hidden="true">15</p>
-                <div class="bar__track" aria-hidden="true">
-                    <div class="bar__fill" id="isi-jeda"></div>
-                </div>
-                <p class="flip">Hitungan mundur di toko menyuruhmu buru-buru. Yang ini menyuruhmu menunggu.</p>
-
-                <div class="box">
-                    <label class="question" for="jawaban" id="teks-refleksi"></label>
-                    <textarea id="jawaban" maxlength="300" placeholder="Tulis jawabanmu, sesingkat apa pun."
-                        aria-describedby="jawaban-note"></textarea>
-                    <p class="note" id="jawaban-note">Jawabanmu tidak disimpan ke mana pun. Yang penting kamu
-                        memikirkannya.</p>
-                </div>
-
-                <p class="hint mt-5" id="status-jeda" role="status" aria-live="polite"></p>
-
-                <div class="result-actions" id="pilihan" hidden>
-                    <button type="button" class="pill" id="tombol-lanjut" disabled>Lanjutkan beli</button>
-                    <button type="button" class="pill pill--red" id="tombol-tunda">Tunda dulu</button>
-                </div>
-            </section>
-
-            <section class="card mt-8" aria-labelledby="jurnal-title">
-                <span class="eyebrow">Jurnal Tunda</span>
-                <h2 id="jurnal-title" class="section-title">Yang berhasil kamu tahan</h2>
-                <p class="lead">Bukan catatan belanja. Yang dicatat justru barang yang kamu tunda, lalu tujuh hari
-                    kemudian kamu ditanya: jadi beli atau tidak?</p>
-
-                <ul class="stats">
-                    <li>Sedang tertahan<strong id="angka-tertahan">Rp0</strong></li>
-                    <li>Akhirnya batal dibeli<strong id="angka-batal">belum ada</strong></li>
-                    <li>Pemicu paling sering<strong id="angka-kategori">belum ada</strong></li>
+            <section class="card enter" aria-labelledby="judul">
+                <span class="eyebrow">Teman Jeda</span>
+                <h1 id="judul" class="title">Ngobrol dulu sebelum checkout</h1>
+                <p class="lead">Lagi pengen beli sesuatu, atau baru saja menyesal? Ceritakan ke Teman Jeda. Dia akan
+                    menemanimu berhenti sebentar dan menimbang ulang, tanpa menghakimi.</p>
+                <ul class="facts">
+                    <li>Simulasi, bukan AI sungguhan</li>
+                    <li>Semua jawaban ditulis tim HoldUp</li>
+                    <li>Ketikanmu tidak dikirim ke mana pun</li>
                 </ul>
 
-                <p class="note mt-5" id="jurnal-kosong">Belum ada entri. Coba simulasi di atas lalu
-                    pilih "Tunda dulu".</p>
-                <ul class="journal" id="daftar-jurnal"></ul>
+                <div class="chat">
+                    <div class="chat__head">
+                        <span class="chat__avatar" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M10 9v6M14 9v6" />
+                            </svg>
+                        </span>
+                        <div>
+                            <h2 class="chat__name" id="chat-nama">Teman Jeda</h2>
+                            <p class="chat__status" id="chat-status">Siap nemenin</p>
+                        </div>
+                        <span class="chat__badge">Simulasi</span>
+                    </div>
 
-                <p class="note">Tersimpan hanya di browser ini. Kalau datanya hilang, hitungan kembali nol dan tidak
-                    ada yang dirugikan.</p>
-                <div class="result-actions justify-start mt-5">
-                    <button type="button" class="pill pill--small" id="hapus-jurnal">Hapus isi jurnal</button>
-                    <a class="pill pill--small pill--red" href="kalkulator.html">Hitung dampak harganya</a>
-                    <a class="pill pill--small" href="teman-jeda.html">Ngobrol sama Teman Jeda</a>
+                    <div class="chat__log" id="log" role="log" aria-labelledby="chat-nama" tabindex="0"></div>
+
+                    <div class="chat__choices" id="pilihan" role="group" aria-label="Pilihan balasan"></div>
+
+                    <form class="chat__form" id="form-chat" autocomplete="off">
+                        <label class="sr-only" for="ketik">Tulis pesan untuk Teman Jeda</label>
+                        <input id="ketik" type="text" maxlength="200" placeholder="Ketik pesanmu">
+                        <button type="submit" class="pill pill--red">Kirim</button>
+                    </form>
+                    <p class="chat__hint">Teman Jeda hanya paham soal belanja impulsif. Kalau tidak paham, dia akan
+                        menawarkan pilihan.</p>
                 </div>
+
+                <p class="note">Teman Jeda bukan psikolog atau konselor. Kalau perasaanmu berat dan tidak kunjung
+                    membaik, hubungi layanan konseling gratis Kementerian Kesehatan di 119 ekstensi 8 atau
+                    <a href="https://healing119.id">healing119.id</a>.</p>
             </section>
 
         </main>
@@ -198,10 +122,10 @@
                 <ul class="site-footer__nav">
                     <li><a href="index.html">Beranda</a></li>
                     <li><a href="kenapa.html">Kenapa impulsif</a></li>
-                    <li><a href="simulasi.html" aria-current="page">Simulasi jeda</a></li>
+                    <li><a href="simulasi.html">Simulasi jeda</a></li>
                     <li><a href="quiz.html">Kuis pemicu</a></li>
                     <li><a href="kalkulator.html">Kalkulator</a></li>
-                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                    <li><a href="teman-jeda.html" aria-current="page">Teman Jeda</a></li>
                     <li><a href="tentang.html">Tentang</a></li>
                 </ul>
             </nav>
@@ -210,7 +134,7 @@
     </footer>
 
     <script src="js/common.js"></script>
-    <script src="js/simulasi.js"></script>
+    <script src="js/teman-jeda.js"></script>
     <script src="js/nav.js"></script>
 </body>
 
