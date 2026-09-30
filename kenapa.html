@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenapa Kita Impulsif | Hold Up</title>
+    <meta name="description" content="Kenapa kita belanja impulsif: taktik dark pattern di situs belanja, lengkap dengan hitungan dan sumbernya.">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hold Up">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Kenapa Kita Impulsif | Hold Up">
+    <meta property="og:description" content="Kenapa kita belanja impulsif: taktik dark pattern di situs belanja, lengkap dengan hitungan dan sumbernya.">
+    <meta property="og:image" content="assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Hold Up dengan tulisan: Ambil jeda sebelum checkout">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>if (window.tailwind) tailwind.config = { corePlugins: { preflight: false } };</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/kenapa.css">
+</head>
+
+<body class="footer-page">
+    <a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+    <div class="grid-red footer-page-content">
+        <header class="top">
+            <a class="logo" href="index.html" aria-label="Hold Up, kembali ke beranda">
+                <img src="assets/logo/1.webp" width="848" height="405" alt="">
+                <img src="assets/logo/2.webp" width="688" height="448" alt="">
+                <img src="assets/logo/3.webp" width="488" height="425" alt="">
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Menu utama">
+                <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-list">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                    Menu
+                </button>
+                <ul class="site-nav__list" id="site-nav-list">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html" aria-current="page">Kenapa Impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi Jeda</a></li>
+                    <li><a href="quiz.html">Kuis Pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="utama" tabindex="-1">
+            <div class="doc">
+
+                <details class="toc" id="toc" open>
+                    <summary>Daftar isi</summary>
+                    <nav aria-label="Daftar isi artikel">
+                        <ol>
+                            <li><a href="#apa-itu">Apa itu belanja impulsif</a>
+                                <ol>
+                                    <li><a href="#impulse-buying">Impulse buying</a></li>
+                                    <li><a href="#doom-spending">Doom spending</a></li>
+                                    <li><a href="#dua-sisi">Dua sisinya</a>
+                                        <ol>
+                                            <li><a href="#kognitif">Kognitif</a></li>
+                                            <li><a href="#afektif">Afektif</a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li><a href="#peraga">Peraga: promo yang mengulang</a></li>
+                            <li><a href="#taktik">Taktik di situs belanja</a>
+                                <ol>
+                                    <li><a href="#indonesia">Di aplikasi Indonesia</a></li>
+                                    <li><a href="#crawl">11.000 situs luar negeri</a></li>
+                                    <li><a href="#regulator">Temuan regulator Eropa</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#situasi">Situasi lebih kuat dari watak</a></li>
+                            <li><a href="#pemicu">Tiga pemicu utama</a>
+                                <ol>
+                                    <li><a href="#fomo">FoMO dan tren</a></li>
+                                    <li><a href="#urgency">Promo dikejar waktu</a></li>
+                                    <li><a href="#mood">Suasana hati</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#paylater">Paylater: kenali sebelum pakai</a>
+                                <ol>
+                                    <li><a href="#aturan-paylater">Aturannya sekarang</a></li>
+                                    <li><a href="#kenapa-paylater">Kenapa tetap perlu dipahami</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#langkah">Lalu harus bagaimana</a></li>
+                            <li><a href="#sumber">Sumber</a></li>
+                        </ol>
+                    </nav>
+                </details>
+
+                <article class="card article enter" aria-labelledby="judul">
+                    <span class="eyebrow">Artikel</span>
+                    <h1 id="judul" class="title">Kenapa kita belanja impulsif?</h1>
+                    <p class="lead">Coba ingat checkout terakhir yang kamu sesali. Berapa lama kamu mikir sebelum bayar?</p>
+                    <p>Kalau jawabannya "nggak lama", kamu tidak sendirian, dan itu juga bukan tanda kamu payah soal uang. Belanja impulsif sudah diteliti puluhan tahun, dan hasilnya cukup konsisten: dorongan untuk membeli jarang muncul begitu saja dari dalam diri. <strong class="hl">Banyak di antaranya sengaja dipasang</strong> di halaman produk, lewat angka, label, dan tombol.</p>
+                    <p>Artikel ini mengajakmu membongkar dorongan itu satu per satu dengan bahasa sehari-hari. Kita mulai dari arti belanja impulsif, lalu melihat trik yang dipakai toko daring di Indonesia dan di luar negeri. Setelah itu kita bahas tiga pemicu yang paling sering, soal paylater, dan apa yang bisa kamu lakukan. Semua angka di sini punya sumber yang bisa kamu cek sendiri di bagian paling bawah.</p>
+                    <p class="byline">Tim HoldUp · 13 menit baca</p>
+
+                    <h2 id="apa-itu">Apa itu belanja impulsif</h2>
+                    <p>Sebelum bicara soal trik, kita samakan dulu istilahnya. Di media sosial kamu mungkin sering dengar dua istilah: impulse buying dan doom spending. Keduanya sama-sama berujung <strong class="hl">checkout yang tidak direncanakan</strong>, tapi alasan di baliknya berbeda. Tahu bedanya membantu kamu menebak dorongan mana yang sedang bekerja.</p>
+
+                    <h3 id="impulse-buying">Impulse buying</h3>
+                    <p>Peneliti perilaku konsumen Dennis Rook menggambarkan belanja impulsif sebagai <strong class="hl">dorongan mendadak, sering kuat, dan terus-menerus untuk membeli sesuatu saat itu juga</strong>.<sup><a href="#ref-1">[1]</a></sup> Kata kuncinya ada tiga: mendadak, kuat, dan sekarang. Kamu tidak sedang mencari barang itu. Kamu melihatnya, lalu tiba-tiba merasa harus punya.</p>
+                    <p>Rook juga mencatat bahwa saat dorongan itu datang, orang cenderung mengabaikan akibatnya dan merasakan tarik-menarik antara keinginan dan kendali diri. Contohnya gampang ditemukan. Kamu buka aplikasi cuma untuk cek pesanan, lalu melihat kaus lucu yang sedang diskon, dan lima menit kemudian kaus itu sudah dibayar.</p>
+                    <p>Belanja impulsif tidak selalu buruk. Kadang barangnya memang berguna. Masalahnya muncul kalau ini jadi kebiasaan, karena uang yang keluar tanpa rencana diam-diam mengambil jatah kebutuhan lain.</p>
+
+                    <h3 id="doom-spending">Doom spending</h3>
+                    <p>Doom spending adalah istilah yang lebih baru dan lebih sering muncul di berita. Istilah ini dipakai untuk <strong class="hl">belanja impulsif yang didorong rasa cemas, rasa ingin tahu, takut ketinggalan, dan ketidakpastian</strong>.<sup><a href="#ref-2">[2]</a></sup> Pemicunya bukan barang yang menarik, melainkan perasaan tidak enak yang ingin cepat diredakan.</p>
+                    <p>Bayangkan kamu baru membaca berita buruk, atau minggu ini sedang berat. Belanja memberi rasa lega yang cepat: ada paket yang bisa ditunggu, ada sesuatu yang terasa bisa dikendalikan. Sayangnya rasa lega itu singkat, sementara uang yang keluar tidak kembali.</p>
+                    <p>Penelitian tentang pemberitaan doom spending di Detik, Tribunnews, dan Kompas sepanjang 2024 menunjukkan media menyebut beberapa penyebab: akses digital yang makin mudah, kesenjangan sosial, dan tren belanja anak muda.<sup><a href="#ref-2">[2]</a></sup> Jadi doom spending bukan cuma urusan pribadi, tapi juga soal lingkungan tempat kita belanja.</p>
+
+                    <h3 id="dua-sisi">Dua sisinya: kognitif dan afektif</h3>
+                    <p>Apa pun namanya, belanja impulsif selalu melibatkan dua hal sekaligus: cara kita berpikir dan apa yang kita rasakan. Verplanken dan Herabadi menyusun alat ukur kecenderungan belanja impulsif dan membaginya menjadi dua sisi, kognitif dan afektif.<sup><a href="#ref-3">[3]</a></sup> Judul penelitian mereka merangkumnya dengan pas: <i>feeling and no thinking</i>, banyak merasa, sedikit berpikir.</p>
+                    <p>Dua sisi ini saling menguatkan. Saat perasaan sedang tinggi, ruang untuk menimbang jadi sempit. Karena itu fitur HoldUp dibuat untuk menyentuh keduanya.</p>
+                    <div class="duo">
+                        <div class="box">
+                            <h4 id="kognitif">Kognitif</h4>
+                            <p>Sisi ini soal pikiran yang dilewati. Tidak ada rencana dan tidak ada pertimbangan, sehingga keputusan sudah jadi sebelum sempat dipikir. Tandanya: kamu baru sadar harganya setelah bayar.</p>
+                            <p><strong>Jawaban HoldUp:</strong> jeda 15 detik berisi pertanyaan yang mengajakmu menimbang lagi.</p>
+                        </div>
+                        <div class="box">
+                            <h4 id="afektif">Afektif</h4>
+                            <p>Sisi ini soal perasaan. Ada rasa senang dan bersemangat saat melihat barang, dorongan yang sulit ditahan, rasa hilang kendali, lalu sering diikuti penyesalan.</p>
+                            <p><strong>Jawaban HoldUp:</strong> pertanyaan soal perasaanmu saat itu, supaya kamu tahu yang kamu cari barangnya atau rasa leganya.</p>
+                        </div>
+                    </div>
+
+                    <h2 id="peraga">Peraga: promo yang mengulang sendiri</h2>
+                    <p>Dorongan mendadak lebih mudah dipahami kalau kamu mengalaminya sendiri. Kartu di bawah ini tiruan, bukan toko sungguhan, dan tidak bisa dibeli. Isinya meniru hal yang biasa kamu lihat di aplikasi belanja: diskon besar, stok tinggal sedikit, dan jam yang terus berjalan.</p>
+                    <p><strong class="hl">Perhatikan hitungan mundurnya</strong> sampai habis. Sambil menunggu, tanyakan pada dirimu: apa yang kamu rasakan saat angkanya makin kecil? Lalu lihat apa yang terjadi saat waktunya selesai.</p>
+                    <div class="promo" aria-label="Contoh kartu promo tiruan">
+                        <div class="promo__top">
+                            <span class="promo__disc">DISKON 60%</span>
+                            <span class="promo__stock">Tersisa 3 barang</span>
+                        </div>
+                        <p class="promo__price">Rp340.000<s>Rp850.000</s></p>
+                        <span class="promo__clock" id="promo-jam" aria-hidden="true">00:20</span>
+                        <p class="note">Penawaran berakhir sebentar lagi</p>
+                    </div>
+                    <p class="reveal" id="promo-teks" role="status" hidden></p>
+                    <p>Kalau kamu sempat merasa sedikit terburu-buru, itu wajar. Angka yang terus mengecil memang dirancang untuk membuat kita ingin cepat memutuskan. Bagian berikutnya menunjukkan bahwa trik seperti ini bukan karangan, tapi benar-benar dipakai toko daring.</p>
+
+                    <h2 id="taktik">Taktik yang dipasang di situs belanja</h2>
+                    <p>Trik seperti hitungan mundur tadi punya nama: <strong class="hl">dark pattern</strong>. Artinya pilihan desain tampilan yang menguntungkan layanan daring dengan cara memaksa, menggiring, atau menipu pengguna, sehingga mereka mengambil keputusan yang sebenarnya tidak mereka niatkan dan bisa merugikan.<sup><a href="#ref-4">[4]</a></sup></p>
+                    <p>Dark pattern jarang terlihat jahat. Kebanyakan tampil seperti informasi biasa, misalnya jumlah stok atau berapa orang yang sedang melihat produk. Justru karena terlihat wajar, dark pattern sulit disadari. Di bagian ini kita lihat seberapa sering pola itu muncul, mulai dari aplikasi yang paling dekat denganmu.</p>
+
+                    <h3 id="indonesia">Di aplikasi belanja Indonesia</h3>
+                    <p>Penelitian tahun 2026 memeriksa tiga aplikasi belanja yang banyak dipakai di Indonesia, yaitu Shopee, Tokopedia, dan Lazada. Tim peneliti menemukan <strong class="hl">14 jenis dark pattern</strong> di ketiga aplikasi itu.<sup><a href="#ref-5">[5]</a></sup> Artinya pola ini bukan cerita dari luar negeri, tapi ada di aplikasi yang mungkin kamu buka hari ini.</p>
+                    <ul class="stats">
+                        <li>Shopee<strong>11 jenis</strong>di 15 elemen</li>
+                        <li>Tokopedia<strong>11 jenis</strong>di 13 elemen</li>
+                        <li>Lazada<strong>6 jenis</strong></li>
+                    </ul>
+                    <p>Jumlah jenis menunjukkan seberapa beragam trik yang dipakai. Jumlah elemen menunjukkan berapa banyak bagian tampilan yang memuatnya, misalnya label, banner, atau tombol.</p>
+                    <p>Masalah berikutnya, pola ini sering tidak dikenali. Penelitian lain mewawancarai 11 orang dan menunjukkan 12 tangkapan layar dari aplikasi belanja Indonesia yang memuat dark pattern. Hasilnya, <strong class="hl">tidak semua peserta berhasil mengenalinya</strong>.<sup><a href="#ref-6">[6]</a></sup></p>
+                    <p>Peneliti mencatat tiga penghalang. Informasi di tampilan kurang jelas, pengguna sudah telanjur percaya pada aplikasinya, dan dark pattern bercampur dengan strategi pemasaran biasa sehingga sulit dibedakan. Peserta yang berhasil mengenali umumnya pernah mengalaminya sendiri.<sup><a href="#ref-6">[6]</a></sup> Ini kabar baik: kemampuan mengenali trik bisa dilatih, dan itulah tujuan halaman ini.</p>
+
+                    <h3 id="crawl">11.000 situs luar negeri</h3>
+                    <p>Di luar negeri, pola yang sama sudah dihitung dalam skala besar. Pada 2019, peneliti Princeton membuat program yang menjelajahi sekitar 53.000 halaman produk dari sekitar 11.000 situs belanja berbahasa Inggris.<sup><a href="#ref-4">[4]</a></sup> Mereka menemukan 1.818 dark pattern di 1.254 situs, atau sekitar 11% dari semua situs yang diperiksa.</p>
+                    <p>Tabel di bawah memuat enam jenis yang paling dekat dengan belanja impulsif. Kolom Kemunculan menghitung berapa kali pola itu ditemukan, sedangkan kolom Situs menghitung berapa situs yang memakainya.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Taktik</th>
+                                <th scope="col">Contoh</th>
+                                <th scope="col">Kemunculan</th>
+                                <th scope="col">Situs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Stok menipis</th>
+                                <td>"Tinggal 2 lagi!"</td>
+                                <td class="num" data-label="Kemunculan">632</td>
+                                <td class="num" data-label="Situs">581</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hitungan mundur</th>
+                                <td>"Promo berakhir 04:59"</td>
+                                <td class="num" data-label="Kemunculan">393</td>
+                                <td class="num" data-label="Situs">361</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pesan aktivitas</th>
+                                <td>"12 orang baru saja membeli"</td>
+                                <td class="num" data-label="Kemunculan">313</td>
+                                <td class="num" data-label="Situs">264</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Confirmshaming</th>
+                                <td>"Nggak, aku nggak suka hemat"</td>
+                                <td class="num" data-label="Kemunculan">169</td>
+                                <td class="num" data-label="Situs">164</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Waktu terbatas</th>
+                                <td>"Hanya hari ini!"</td>
+                                <td class="num" data-label="Kemunculan">88</td>
+                                <td class="num" data-label="Situs">84</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Permintaan tinggi</th>
+                                <td>"Banyak yang sedang melihat ini"</td>
+                                <td class="num" data-label="Kemunculan">47</td>
+                                <td class="num" data-label="Situs">43</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Yang paling sering muncul adalah pesan stok menipis: <strong class="hl">632 kali di 581 situs</strong>. Pesan seperti ini membuat kita merasa harus cepat sebelum kehabisan. Hitungan mundur ada di urutan kedua, dan pesan aktivitas seperti "12 orang baru saja membeli" di urutan ketiga.</p>
+                    <p>Temuan lain yang menarik: peneliti menemukan 22 perusahaan pihak ketiga yang menyediakan fitur dark pattern untuk toko daring.<sup><a href="#ref-4">[4]</a></sup> Artinya toko tidak perlu membuat trik itu sendiri. Mereka bisa memasangnya dari penyedia yang sudah ada.</p>
+                    <p class="note">Data crawl 2019, situs berbahasa Inggris, bukan data Indonesia. Contoh kalimat ditulis
+                        tim.</p>
+
+                    <h3 id="regulator">Temuan regulator Eropa</h3>
+                    <p>Temuan peneliti juga dikonfirmasi oleh pengawas resmi. Pada Januari 2023, Komisi Eropa bersama otoritas perlindungan konsumen dari 23 negara Uni Eropa, ditambah Norwegia dan Islandia, memeriksa 399 toko daring.<sup><a href="#ref-7">[7]</a></sup></p>
+                    <ul class="stats">
+                        <li>Toko daring diperiksa<strong>399</strong></li>
+                        <li>Memakai setidaknya satu pola manipulatif<strong>148</strong></li>
+                        <li>Memasang hitungan mundur palsu<strong>42</strong></li>
+                    </ul>
+                    <p>Artinya, <strong class="hl">lebih dari sepertiga toko</strong> yang diperiksa memakai setidaknya satu trik. Selain 42 toko dengan hitungan mundur palsu, 54 toko menggiring pembeli ke pilihan tertentu lewat desain atau kata-kata, misalnya ke langganan atau pengiriman yang lebih mahal. Ada juga 70 toko yang menyembunyikan informasi penting, seperti biaya kirim atau adanya pilihan yang lebih murah.<sup><a href="#ref-7">[7]</a></sup></p>
+                    <p>Toko-toko itu lalu dihubungi otoritas di negaranya masing-masing dan diminta memperbaiki situsnya. Jadi di Eropa, trik seperti ini dianggap masalah perlindungan konsumen, bukan sekadar strategi jualan.</p>
+
+                    <h2 id="situasi">Situasi lebih kuat dari watak</h2>
+                    <p>Setelah melihat betapa banyak trik yang dipasang, wajar kalau muncul pertanyaan: yang paling berpengaruh itu tokonya atau orangnya? Kalau kamu sering belanja impulsif, apakah memang wataknya begitu?</p>
+                    <p>Anoop dan Rahman mencoba menjawabnya dengan merangkum 84 hasil penelitian dari 75 artikel yang terbit sampai Desember 2023, dengan total 139.545 peserta.<sup><a href="#ref-8">[8]</a></sup> Cara ini disebut meta-analisis: hasil banyak penelitian digabung supaya kesimpulannya tidak bergantung pada satu studi saja.</p>
+                    <p>Mereka mengukur seberapa kuat hubungan tiap kelompok faktor dengan belanja impulsif daring. Makin besar angkanya, makin kuat hubungannya.</p>
+                    <ul class="stats stats--two-by-two">
+                        <li>Rangsangan situasi, misalnya suasana dan waktu<strong>0,477</strong></li>
+                        <li>Rangsangan pemasaran, misalnya promo dan tampilan toko<strong>0,433</strong></li>
+                        <li>Faktor dari diri pembeli sendiri<strong>0,388</strong></li>
+                        <li>Faktor platform, yaitu aplikasi atau situs belanjanya<strong>0,362</strong></li>
+                    </ul>
+                    <p>Faktor dari dalam diri pembeli memang berpengaruh, tapi bukan yang terkuat. Dua faktor teratas, situasi dan pemasaran, sama-sama datang dari luar.</p>
+                    <p class="pull">Dua pendorong terkuat <span>datang dari luar diri.</span></p>
+                    <p>Ini bukan berarti kamu tidak bertanggung jawab atas belanjamu. Maksudnya, menyalahkan diri sendiri jarang membantu. Lebih berguna kalau kamu mengenali momen yang berbahaya, yaitu saat situasi dan promo sedang menekan bersamaan. Itulah alasan HoldUp menyasar <strong class="hl">momennya, bukan disiplinmu</strong>.</p>
+
+                    <h2 id="pemicu">Tiga pemicu utama</h2>
+                    <p>Dorongan dari luar datang lewat banyak pintu. Supaya mudah diingat, HoldUp mengelompokkannya menjadi tiga pemicu. Pengelompokan yang sama dipakai di Kuis Pemicu, jadi setelah membaca bagian ini kamu bisa langsung mengecek pemicu mana yang paling kuat buatmu.</p>
+
+                    <h3 id="fomo">FoMO dan tren</h3>
+                    <p>FoMO singkatan dari fear of missing out. Psikolog Andrew Przybylski dan rekan mendefinisikannya sebagai <strong class="hl">kekhawatiran bahwa orang lain sedang mengalami hal menyenangkan tanpa dirimu</strong>, disertai keinginan untuk terus tahu apa yang orang lain lakukan.<sup><a href="#ref-9">[9]</a></sup></p>
+                    <p>Dalam belanja, FoMO muncul lewat konten kreator yang memamerkan barang, live shopping yang ramai komentar, atau teman yang sudah punya barang yang sedang tren. Rasanya kamu tertinggal kalau tidak ikut membeli. Pesan "12 orang baru saja membeli" di tabel tadi memanfaatkan perasaan yang sama.</p>
+                    <p>Buat Gen Z Indonesia, pintu ini terbuka tiap hari: <strong class="hl">87,80% sudah memakai internet</strong>, di atas rata-rata nasional 80,66%.<sup><a href="#ref-10">[10]</a></sup> Makin sering terhubung, makin sering pula kita melihat apa yang dibeli orang lain.</p>
+
+                    <h3 id="urgency">Promo dikejar waktu</h3>
+                    <p>Pemicu kedua adalah waktu. Hitungan mundur, pesan stok menipis, dan label "hanya hari ini" membuat keputusan terasa harus diambil <strong class="hl">sekarang juga</strong>. Kamu sudah melihat seberapa sering pola ini muncul: di crawl Princeton, stok menipis ditemukan 632 kali dan hitungan mundur 393 kali.<sup><a href="#ref-4">[4]</a></sup></p>
+                    <p>Tekanan waktu bekerja dengan memotong sisi kognitif tadi. Saat merasa harus cepat, kita tidak sempat membandingkan harga, mengecek apakah barangnya perlu, atau menunggu sampai besok. Padahal, seperti di peraga tadi, tidak semua hitungan mundur itu sungguhan. Regulator Eropa menemukan 42 toko yang memasang hitungan mundur palsu.<sup><a href="#ref-7">[7]</a></sup></p>
+                    <p>Satu pertanyaan sederhana bisa membantu: kalau promonya habis, apakah kamu tetap mau membeli barang ini dengan harga normal? Kalau jawabannya tidak, mungkin yang kamu inginkan diskonnya, bukan barangnya.</p>
+
+                    <h3 id="mood">Suasana hati</h3>
+                    <p>Pemicu ketiga adalah suasana hati. Stres karena tugas, bosan di malam hari, atau sedih setelah hari yang buruk bisa membuat belanja terasa seperti hiburan. Inilah inti doom spending yang dibahas di awal: belanja untuk meredakan rasa cemas dan tidak pasti.<sup><a href="#ref-2">[2]</a></sup></p>
+                    <p>Masalahnya, rasa lega dari belanja cepat hilang, sedangkan <strong class="hl">tagihannya bertahan lama</strong>. Sisi afektif yang dijelaskan Verplanken dan Herabadi juga mencatat bahwa dorongan emosi seperti ini sering diikuti penyesalan.<sup><a href="#ref-3">[3]</a></sup></p>
+                    <p>Kalau kamu sadar sedang ingin belanja karena perasaan, coba beri nama perasaannya dulu. Sedang capek, bosan, atau kesal? Kadang yang dibutuhkan bukan barang baru, melainkan istirahat, ngobrol dengan teman, atau keluar rumah sebentar.</p>
+
+                    <h2 id="paylater">Paylater: kenali sebelum pakai</h2>
+                    <p>Ada satu tombol yang membuat ketiga pemicu tadi makin kuat: bayar nanti. Paylater, atau beli sekarang bayar nanti, membuat harga terasa ringan karena uangmu tidak langsung berkurang. Tombol ini sering muncul <strong class="hl">tepat saat dorongan belanja paling kuat</strong>, yaitu ketika kamu sudah di halaman pembayaran.</p>
+                    <p>Pemakaiannya di Indonesia tumbuh cepat. Data OJK untuk Juli 2026 menunjukkan hal berikut.<sup><a href="#ref-11">[11]</a></sup></p>
+                    <ul class="stats">
+                        <li>Rekening paylater di bank<strong>33,50 juta</strong></li>
+                        <li>Total utang paylater di bank<strong>Rp31,56 triliun</strong>naik 31,22% dalam setahun</li>
+                        <li>Utang paylater di perusahaan pembiayaan<strong>Rp13,62 triliun</strong>naik 54,65% dalam setahun</li>
+                    </ul>
+                    <p>Dalam setahun, utang paylater di bank naik hampir sepertiga, dan di perusahaan pembiayaan naik lebih dari separuh. Artinya makin banyak orang yang terbiasa membeli dulu dan memikirkan pembayarannya belakangan.</p>
+
+                    <h3 id="aturan-paylater">Aturannya sekarang</h3>
+                    <p>OJK kemudian mengetatkan aturan. Sejak 1 Juli 2026, perusahaan pembiayaan yang menyediakan paylater wajib memeriksa calon penggunanya dengan syarat berikut.<sup><a href="#ref-12">[12]</a></sup></p>
+                    <ul class="tips">
+                        <li>Usia minimal 18 tahun atau sudah menikah.</li>
+                        <li>Penghasilan minimal Rp3 juta per bulan, dibuktikan slip gaji atau mutasi rekening.</li>
+                        <li>Cicilan dibatasi paling tinggi 40% dari penghasilan pada 2027 dan 2028, lalu 30% mulai 2029.</li>
+                    </ul>
+                    <p>Aturan ini khusus untuk paylater dari perusahaan pembiayaan, bukan dari bank. Tujuannya supaya orang tidak berutang melebihi kemampuannya membayar.</p>
+
+                    <h3 id="kenapa-paylater">Kenapa tetap perlu dipahami</h3>
+                    <p>Sebagian Gen Z sudah berusia 18 tahun ke atas dan mulai berpenghasilan, jadi sudah bisa memenuhi syarat itu. Sisanya akan menyusul dalam beberapa tahun. Lebih baik paham cara kerjanya sekarang, sebelum tombolnya benar-benar bisa kamu pakai.</p>
+                    <p>Tinjauan atas 15 penelitian tentang pengguna paylater menemukan tiga hal.<sup><a href="#ref-13">[13]</a></sup> Pertama, literasi keuangan membantu menekan perilaku konsumtif. Kedua, orang yang merasa hidupnya lebih banyak ditentukan hal di luar dirinya tetap bisa terdorong belanja impulsif, meskipun paham keuangan. Ketiga, paylater sendiri <strong class="hl">berpotensi menaikkan belanja impulsif</strong>.</p>
+                    <p>Jadi aturan hanya membatasi siapa yang boleh berutang. <strong class="hl">Kebiasaan menahan diri tetap harus dilatih sendiri.</strong></p>
+
+                    <h2 id="langkah">Lalu harus bagaimana</h2>
+                    <p>Sampai sini kita sudah melihat tiga hal. Dorongan belanja datang dari pikiran dan perasaan, toko memasang trik dengan sengaja, dan situasi sering lebih kuat daripada niat. Tokonya tidak akan berhenti memasang trik. Yang bisa kamu ubah adalah beberapa detik terakhir sebelum menekan tombol bayar.</p>
+                    <p>Penelitian mendukung cara ini. Moser dan rekan menyurvei 151 pembeli impulsif daring, dan mereka justru menginginkan alat yang mengajak menimbang, menunda pembelian, menambah sedikit usaha saat checkout, dan membuat biaya lebih terasa.<sup><a href="#ref-14">[14]</a></sup> Han dan rekan lalu menguji empat bentuk bantuan pada 107 peserta di situs belanja sungguhan: mengajak merenung, mengalihkan perhatian, mengecilkan keinginan, dan menonjolkan biaya. <strong class="hl">Semua bentuk bantuan itu berhasil menurunkan dorongan belanja impulsif.</strong><sup><a href="#ref-15">[15]</a></sup></p>
+                    <p>Ada juga kebiasaan berpikir yang sering terlewat. Saat melihat harga, kita jarang memikirkan hal lain yang bisa didapat dengan uang yang sama. Frederick dan rekan menyebutnya opportunity cost neglect, dan menemukan bahwa orang lebih jarang membeli setelah diingatkan pada pilihan lain itu.<sup><a href="#ref-16">[16]</a></sup></p>
+                    <p>HoldUp menerapkan temuan ini lewat empat alat. Kuis Pemicu membantumu mengenali pemicu terkuatmu. Simulasi Jeda melatihmu berhenti 15 detik sambil menjawab pertanyaan reflektif. Kalkulator menerjemahkan harga barang menjadi hal lain yang bisa kamu dapat dengan uang yang sama.</p>
+                    <p>Teman Jeda menggabungkan keempat bentuk bantuan dari penelitian Han tadi dalam satu obrolan. Pertanyaan "kalau harganya normal, masih mau?" mengajak merenung. Saran jalan sebentar atau dengar lagu mengalihkan perhatian. Pertanyaan "kalau nggak ada yang tahu kamu beli ini, masih mau?" mengecilkan keinginan. Harga yang diterjemahkan jadi makan di luar atau paket data menonjolkan biaya. Teman Jeda sengaja dibuat sebagai simulasi, bukan AI: semua jawabannya ditulis tim, sehingga bisa dicek satu per satu dan tidak pernah mengarang angka.</p>
+                    <p>Urutan paling mudah: <strong class="hl">kenali pemicumu dulu, lalu latih jeda sebelum checkout</strong>.</p>
+                    <div class="result-actions justify-start">
+                        <a class="pill pill--red" href="quiz.html">Cari tahu pemicumu</a>
+                        <a class="pill" href="simulasi.html">Coba simulasi jeda</a>
+                        <a class="pill" href="kalkulator.html">Hitung harganya</a>
+                        <a class="pill" href="teman-jeda.html">Ngobrol sama Teman Jeda</a>
+                    </div>
+                    <p class="note">Satu hal yang kami tolak: confirmshaming. Tidak ada kalimat di sini yang menyalahkanmu.</p>
+
+                    <h2 id="sumber">Sumber</h2>
+                    <ol class="refs">
+                        <li id="ref-1">Rook, D. W. (1987). The buying impulse. <i>Journal of Consumer Research, 14</i>(2), 189–199.
+                            <a href="https://doi.org/10.1086/209105">https://doi.org/10.1086/209105</a></li>
+                        <li id="ref-2">Syaugie, A., &amp; Nurhajati, L. (2025). Online media framing pada fenomena pemberitaan doom spending di kalangan
+                            milenial dan Gen Z. <i>Jurnal PIKMA, 7</i>(2), 303–320.
+                            <a href="https://doi.org/10.24076/4vy3nq43">https://doi.org/10.24076/4vy3nq43</a></li>
+                        <li id="ref-3">Verplanken, B., &amp; Herabadi, A. (2001). Individual differences in impulse buying
+                            tendency: Feeling and no thinking. <i>European Journal of Personality, 15</i>(S1), S71–S83.
+                            <a href="https://doi.org/10.1002/per.423">https://doi.org/10.1002/per.423</a></li>
+                        <li id="ref-4">Mathur, A., Acar, G., Friedman, M. J., Lucherini, E., Mayer, J., Chetty, M., &amp;
+                            Narayanan, A. (2019). Dark patterns at scale: Findings from a crawl of 11K shopping websites.
+                            <i>Proceedings of the ACM on Human-Computer Interaction, 3</i>(CSCW), 1–32.
+                            <a href="https://doi.org/10.1145/3359183">https://doi.org/10.1145/3359183</a></li>
+                        <li id="ref-5">Nurmalitasari, S., Mazaya, D., Iman, U. A. A., Santoso, H. B., Cenka, B. A. N., &amp;
+                            Schrepp, M. (2026). Detection and design evaluation of dark patterns in Indonesian mobile
+                            e-commerce apps. <i>Lecture Notes in Computer Science</i>, 425–444.
+                            <a href="https://doi.org/10.1007/978-3-032-30086-7_29">https://doi.org/10.1007/978-3-032-30086-7_29</a></li>
+                        <li id="ref-6">Zahratunnisa, H. S., Etiveni, I., Purwandari, B., &amp; Purwaningsih, E. H. (2025).
+                            How people recognize dark pattern in e-commerce? <i>Jurnal Sistem Informasi, 21</i>(1), 82–97.
+                            <a href="https://doi.org/10.21609/jsi.v21i1.1479">https://doi.org/10.21609/jsi.v21i1.1479</a></li>
+                        <li id="ref-7">European Commission. (2023, 30 Januari). <i>Consumer protection: manipulative online
+                                practices found on 148 out of 399 online shops screened</i> (IP/23/418).
+                            <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_23_418">https://ec.europa.eu/commission/presscorner/detail/en/ip_23_418</a></li>
+                        <li id="ref-8">Anoop, T. S., &amp; Rahman, Z. (2024). Online impulse buying: A systematic review of 25
+                            years of research using meta regression. <i>Journal of Consumer Behaviour, 24</i>(1), 363–391.
+                            <a href="https://doi.org/10.1002/cb.2418">https://doi.org/10.1002/cb.2418</a></li>
+                        <li id="ref-9">Przybylski, A. K., Murayama, K., DeHaan, C. R., &amp; Gladwell, V. (2013). Motivational, emotional, and
+                            behavioral correlates of fear of missing out. <i>Computers in Human Behavior, 29</i>(4), 1841–1848.
+                            <a href="https://doi.org/10.1016/j.chb.2013.02.014">https://doi.org/10.1016/j.chb.2013.02.014</a></li>
+                        <li id="ref-10">Asosiasi Penyelenggara Jasa Internet Indonesia. (2025). <i>Survei Profil Internet
+                                Indonesia 2025</i>. Dikutip dari ANTARA, 6 Agustus 2025.
+                            <a href="https://www.antaranews.com/berita/5019229/apjii-catat-tingkat-penetrasi-internet-indonesia-capai-8066-persen">https://www.antaranews.com/berita/5019229/apjii-catat-tingkat-penetrasi-internet-indonesia-capai-8066-persen</a></li>
+                        <li id="ref-11">Otoritas Jasa Keuangan. (2026, 7 September). <i>Siaran Pers Rapat Dewan Komisioner
+                                Bulanan Agustus 2026</i> (SP 166/OJK/DKPU/IX/2026).
+                            <a href="https://www.ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/RDKB-Agustus-2026.aspx">https://www.ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/RDKB-Agustus-2026.aspx</a></li>
+                        <li id="ref-12">Otoritas Jasa Keuangan. (2026). <i>Peraturan Anggota Dewan Komisioner OJK Nomor 2 Tahun 2026
+                                tentang Penyelenggaraan Beli Sekarang Bayar Nanti (Buy Now Pay Later) bagi Perusahaan
+                                Pembiayaan dan Perusahaan Pembiayaan Syariah</i>. Ditetapkan 4 Mei 2026.
+                            <a href="https://ojk.go.id/id/regulasi/Pages/PADK-2-Tahun-2026-Penyelenggaraan-BNPL-Bagi-Perusahaan-Pembiayaan-dan-Perusahaan-Pembiayaan-Syariah.aspx">https://ojk.go.id/id/regulasi/Pages/PADK-2-Tahun-2026-Penyelenggaraan-BNPL-Bagi-Perusahaan-Pembiayaan-dan-Perusahaan-Pembiayaan-Syariah.aspx</a></li>
+                        <li id="ref-13">Miranda, A., &amp; Nuryana, I. (2026). Dampak kesenjangan literasi keuangan dan locus of
+                            control terhadap perilaku konsumtif pengguna paylater: Systematic literature review. <i>Jurnal
+                                Pendidikan Ekonomi (JUPE), 14</i>(1), 58–71.
+                            <a href="https://doi.org/10.26740/jupe.v14n1.p58-71">https://doi.org/10.26740/jupe.v14n1.p58-71</a></li>
+                        <li id="ref-14">Moser, C., Schoenebeck, S. Y., &amp; Resnick, P. (2019). Impulse buying: Design practices and consumer needs.
+                            <i>Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems</i>, 1–15.
+                            <a href="https://doi.org/10.1145/3290605.3300472">https://doi.org/10.1145/3290605.3300472</a></li>
+                        <li id="ref-15">Han, Y., Kim, H., Chu, H., Kim, J., Lee, H., Choe, S., Jung, D., Chung, D., Kwon, B. C., &amp; Ko, S. (2021).
+                            Wait, let's think about your purchase again: A study on interventions for supporting self-controlled online
+                            purchases. <i>Proceedings of the Web Conference 2021</i>, 2476–2487.
+                            <a href="https://doi.org/10.1145/3442381.3450021">https://doi.org/10.1145/3442381.3450021</a></li>
+                        <li id="ref-16">Frederick, S., Novemsky, N., Wang, J., Dhar, R., &amp; Nowlis, S. (2009). Opportunity cost neglect.
+                            <i>Journal of Consumer Research, 36</i>(4), 553–561.
+                            <a href="https://doi.org/10.1086/599764">https://doi.org/10.1086/599764</a></li>
+                    </ol>
+                </article>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__logo" role="img" aria-label="Hold Up">
+            <img src="assets/logo/1.webp" width="848" height="405" alt="">
+            <img src="assets/logo/2.webp" width="688" height="448" alt="">
+            <img src="assets/logo/3.webp" width="488" height="425" alt="">
+        </div>
+        <div class="site-footer__bottom">
+            <nav class="site-footer__links" aria-label="Halaman Hold Up">
+                <ul class="site-footer__nav">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html" aria-current="page">Kenapa impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi jeda</a></li>
+                    <li><a href="quiz.html">Kuis pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__copyright">Hold Up &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/kenapa.js"></script>
+    <script src="js/stabilo.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

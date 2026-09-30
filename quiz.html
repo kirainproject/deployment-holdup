@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenali Pemicumu | Hold Up</title>
+    <meta name="description" content="Kuis singkat untuk mengenali pemicu belanja impulsifmu: FoMO, promo kilat, atau suasana hati.">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hold Up">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Kenali Pemicumu | Hold Up">
+    <meta property="og:description" content="Kuis singkat untuk mengenali pemicu belanja impulsifmu: FoMO, promo kilat, atau suasana hati.">
+    <meta property="og:image" content="assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Hold Up dengan tulisan: Ambil jeda sebelum checkout">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>if (window.tailwind) tailwind.config = { corePlugins: { preflight: false } };</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body class="footer-page">
+    <a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+    <div class="grid-red footer-page-content">
+        <header class="top">
+            <a class="logo" href="index.html" aria-label="Hold Up, kembali ke beranda">
+                <img src="assets/logo/1.webp" width="848" height="405" alt="">
+                <img src="assets/logo/2.webp" width="688" height="448" alt="">
+                <img src="assets/logo/3.webp" width="488" height="425" alt="">
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Menu utama">
+                <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-list">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                    Menu
+                </button>
+                <ul class="site-nav__list" id="site-nav-list">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa Impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi Jeda</a></li>
+                    <li><a href="quiz.html" aria-current="page">Kuis Pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="utama" tabindex="-1">
+
+            <section id="intro" class="card enter" aria-labelledby="intro-title">
+                <span class="eyebrow">Kenali pemicumu</span>
+                <h1 id="intro-title" class="title">Apa yang bikin kamu pengen checkout?</h1>
+                <p class="lead">Enam pernyataan singkat tentang kebiasaan belanjamu dalam 3 bulan terakhir. Pilih
+                    seberapa sering itu terjadi. Nggak ada jawaban benar atau salah, jawab sejujurnya.</p>
+                <ul class="facts">
+                    <li>6 pertanyaan</li>
+                    <li>Sekitar 1 menit</li>
+                    <li>Hasil cuma disimpan di browser kamu</li>
+                </ul>
+                <button type="button" class="pill pill--red" id="mulai">
+                    Mulai kuis
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </section>
+
+            <section id="kuis" class="card" aria-labelledby="kuis-title" hidden>
+                <h1 id="kuis-title" class="eyebrow">Kenali pemicumu</h1>
+                <div class="progress">
+                    <span class="progress__label" id="progress-label">Pertanyaan 1 dari 6</span>
+                    <div class="progress__track" aria-hidden="true">
+                        <div class="progress__fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <form id="form-kuis" novalidate>
+                <div id="daftar-soal"></div>
+
+                <p class="hint" id="hint" aria-live="polite"></p>
+
+                <div class="actions">
+                    <button type="button" class="pill" id="kembali">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                        Sebelumnya
+                    </button>
+                    <button type="submit" class="pill pill--red" id="lanjut">
+                        <span id="lanjut-label">Lanjut</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+                </form>
+            </section>
+
+            <section id="hasil" class="card" aria-labelledby="hasil-title" hidden>
+                <div class="result-head">
+                    <span class="eyebrow">Pemicu terbesarmu</span>
+                    <h1 id="hasil-title" class="title" tabindex="-1"></h1>
+                    <p class="lead" id="hasil-desc"></p>
+                </div>
+
+                <h2 class="eyebrow mt-8">Peta pemicumu</h2>
+                <ul class="bars" id="bars"></ul>
+
+                <div class="box">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E6A817" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z" />
+                        </svg>
+                        Tips buat kamu
+                    </h3>
+                    <ul class="tips" id="tips"></ul>
+                </div>
+
+                <div class="box">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#DC1928" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z" />
+                        </svg>
+                        Lagi kepengen checkout sekarang?
+                    </h3>
+                    <p>Ngobrol sebentar sama Teman Jeda. Pemicu terbesarmu dari kuis ini ikut diingat, jadi kamu nggak
+                        perlu cerita ulang.</p>
+                    <a class="pill pill--red mt-4" href="teman-jeda.html">Ngobrol sama Teman Jeda</a>
+                    <p class="note">Teman Jeda simulasi, bukan AI. Semua jawabannya ditulis tim Hold Up.</p>
+                </div>
+
+                <p class="note">Kuis ini alat refleksi, bukan tes psikologi atau diagnosis. Pernyataannya disusun dengan
+                    mengacu pada skala riset tentang belanja impulsif dan FoMO, tapi versi singkat ini belum diuji
+                    validitasnya.</p>
+
+                <div class="result-actions">
+                    <button type="button" class="pill" id="ulang">Ulangi kuis</button>
+                    <a class="pill pill--red" href="simulasi.html">Latih jeda sebelum checkout</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__logo" role="img" aria-label="Hold Up">
+            <img src="assets/logo/1.webp" width="848" height="405" alt="">
+            <img src="assets/logo/2.webp" width="688" height="448" alt="">
+            <img src="assets/logo/3.webp" width="488" height="425" alt="">
+        </div>
+        <div class="site-footer__bottom">
+            <nav class="site-footer__links" aria-label="Halaman Hold Up">
+                <ul class="site-footer__nav">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi jeda</a></li>
+                    <li><a href="quiz.html" aria-current="page">Kuis pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__copyright">Hold Up &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

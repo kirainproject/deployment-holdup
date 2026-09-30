@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Kerja dan Privasi | Hold Up</title>
+    <meta name="description" content="Cerita di balik HoldUp: kenapa dibuat, apa yang dilakukan, apa yang tidak dijanjikan, dan ke mana datamu pergi.">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hold Up">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Cara Kerja dan Privasi | Hold Up">
+    <meta property="og:description" content="Cerita di balik HoldUp: kenapa dibuat, apa yang dilakukan, apa yang tidak dijanjikan, dan ke mana datamu pergi.">
+    <meta property="og:image" content="assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Hold Up dengan tulisan: Ambil jeda sebelum checkout">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>if (window.tailwind) tailwind.config = { corePlugins: { preflight: false } };</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tentang.css">
+</head>
+
+<body class="footer-page">
+    <a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+    <div class="grid-red footer-page-content">
+        <header class="top">
+            <a class="logo" href="index.html" aria-label="Hold Up, kembali ke beranda">
+                <img src="assets/logo/1.webp" width="848" height="405" alt="">
+                <img src="assets/logo/2.webp" width="688" height="448" alt="">
+                <img src="assets/logo/3.webp" width="488" height="425" alt="">
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Menu utama">
+                <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-list">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                    Menu
+                </button>
+                <ul class="site-nav__list" id="site-nav-list">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa Impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi Jeda</a></li>
+                    <li><a href="quiz.html">Kuis Pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="utama" tabindex="-1">
+            <article class="card article enter" aria-labelledby="judul">
+                <span class="eyebrow">Tentang</span>
+                <h1 id="judul" class="title">Kenapa HoldUp ada</h1>
+                <p class="lead">HoldUp adalah <strong class="hl">jeda singkat sebelum checkout</strong>. Dibuat untuk
+                    Gen Z Indonesia yang sudah bisa belanja sendiri, tapi belum tentu sempat berpikir dulu.</p>
+                <p class="byline">Tim HoldUp · 3 menit baca</p>
+
+                <h2 id="angka">Berawal dari satu angka</h2>
+                <p>Agustus 2026, OJK, LPS, dan BPS merilis Survei Nasional Literasi dan Inklusi Keuangan (SNLIK)
+                    2026.<sup><a href="#ref-1" aria-label="Sumber 1">[1]</a></sup></p>
+                <p>Di kelompok Gen Z termuda, usia 15–17 tahun, <strong class="hl">89,13% sudah memakai produk keuangan</strong>. Yang
+                    benar-benar paham produknya baru <strong class="hl">56,04%</strong>.</p>
+                <p class="pull">Selisihnya 33,09 poin, <span>terbesar dari semua kelompok usia.</span></p>
+                <p>Hampir 9 dari 10 sudah bisa bayar sendiri. Pemahamannya belum menyusul, dan di usia 18–25 pun literasinya baru 73,32%.</p>
+
+                <h2 id="detik">Masalahnya ada di detik terakhir</h2>
+                <p>Hitung mundur promo, stok "tinggal 3", tombol Beli Sekarang yang selalu di depan mata. Semuanya
+                    dirancang supaya kamu <strong class="hl">memutuskan sebelum sempat berpikir</strong>.</p>
+                <p>Edukasi keuangan biasanya datang jauh sebelum atau jauh sesudah momen itu. Jarang ada yang hadir
+                    saat jari sudah di atas tombol bayar.</p>
+                <p>Cara kerja trik-trik itu kami bahas di artikel <a href="kenapa.html">Kenapa kita belanja
+                        impulsif?</a></p>
+
+                <h2 id="jeda">Jadi kami bikin jeda</h2>
+                <p>HoldUp tidak melarang kamu belanja. HoldUp cuma memberi <strong class="hl">15 detik untuk bertanya
+                        ke diri sendiri</strong>: aku butuh ini, atau cuma lagi pengen?</p>
+                <ul class="fitur">
+                    <li><a href="quiz.html">Kuis Pemicu</a>: 6 pertanyaan untuk mengenali apa yang paling sering bikin
+                        kamu kalap.</li>
+                    <li><a href="simulasi.html">Simulasi Jeda</a>: tahan 15 detik, jawab satu pertanyaan, lalu
+                        putuskan. Yang ditunda masuk Jurnal Tunda dan ditanya lagi 7 hari kemudian.</li>
+                    <li><a href="kalkulator.html">Kalkulator Dampak</a>: ubah harga barang jadi berapa hari uang
+                        sakumu.</li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a>: obrolan simulasi yang menemanimu menimbang ulang
+                        sebelum checkout.</li>
+                </ul>
+
+                <h2 id="batas">Yang tidak kami janjikan</h2>
+                <p>HoldUp <strong class="hl">bukan pemblokir</strong>. Tidak terhubung ke toko, bank, atau metode
+                    pembayaran mana pun. Keputusan akhir tetap di tanganmu.</p>
+                <p>HoldUp juga bukan pencatat keuangan, dan bukan pengganti konsultasi dengan ahli keuangan atau
+                    psikolog.</p>
+                <p>Pertanyaan refleksinya berangkat dari riset, tapi hasilnya beda untuk tiap orang. <strong
+                        class="hl">Efek HoldUp sendiri belum diuji secara ilmiah.</strong></p>
+                <p>Tidak ada AI di sini. Teman Jeda pun simulasi: semua pertanyaan dan respons ditulis manusia.</p>
+
+                <h2 id="privasi">Datamu tetap di perangkatmu</h2>
+                <p>Situs ini statis: tanpa server, tanpa akun, tanpa pelacak. Hasil kuis, uang saku, dan Jurnal Tunda
+                    <strong class="hl">hanya tersimpan di browsermu sendiri</strong>.</p>
+                <p>Mau bersih-bersih? Satu tombol cukup.</p>
+                <div class="result-actions">
+                    <button type="button" class="pill" id="hapus-semua">Hapus semua data HoldUp di browser ini</button>
+                </div>
+                <p class="hint" id="hapus-status" role="status"></p>
+
+                <h2 id="dibuat">Dibuat sendiri, dari nol</h2>
+
+                <p>Logo, ikon, dan ilustrasi di situs ini <strong class="hl">dirancang sendiri oleh tim di
+                        Figma</strong>. Tidak ada foto atau ilustrasi milik orang lain.</p>
+                <p>Tampilannya memakai Tailwind CSS lewat CDN dan CSS yang ditulis sendiri. Logikanya JavaScript
+                    murni, tanpa React, Vue, atau library lain.</p>
+
+                <h2 id="mulai">Mulai dari mana?</h2>
+                <p>Lagi ngincer sesuatu? Tahan dulu 15 detik.</p>
+                <div class="result-actions">
+                    <a class="pill pill--red" href="simulasi.html">Coba simulasi jeda</a>
+                    <a class="pill" href="kenapa.html">Baca kenapa kita impulsif</a>
+                </div>
+
+                <h2 id="sumber">Sumber</h2>
+                <ol class="refs">
+                    <li id="ref-1">OJK, LPS, &amp; BPS. (2026, 11 Agustus). <i>Hasil Survei Nasional Literasi dan
+                            Inklusi Keuangan (SNLIK) Tahun 2026</i> (SP 152/OJK/DKPU/VIII/2026).
+                        <a href="https://www.ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/Hasil-SNLIK-Tahun-2026.aspx">https://www.ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/Hasil-SNLIK-Tahun-2026.aspx</a></li>
+                </ol>
+            </article>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__logo" role="img" aria-label="Hold Up">
+            <img src="assets/logo/1.webp" width="848" height="405" alt="">
+            <img src="assets/logo/2.webp" width="688" height="448" alt="">
+            <img src="assets/logo/3.webp" width="488" height="425" alt="">
+        </div>
+        <div class="site-footer__bottom">
+            <nav class="site-footer__links" aria-label="Halaman Hold Up">
+                <ul class="site-footer__nav">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi jeda</a></li>
+                    <li><a href="quiz.html">Kuis pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                    <li><a href="tentang.html" aria-current="page">Tentang</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__copyright">Hold Up &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/tentang.js"></script>
+    <script src="js/stabilo.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

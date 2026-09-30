@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman Jeda | Hold Up</title>
+    <meta name="description" content="Teman Jeda, obrolan simulasi yang menemanimu menimbang ulang sebelum checkout. Semua jawaban ditulis tim, bukan AI.">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hold Up">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Teman Jeda | Hold Up">
+    <meta property="og:description" content="Teman Jeda, obrolan simulasi yang menemanimu menimbang ulang sebelum checkout. Semua jawaban ditulis tim, bukan AI.">
+    <meta property="og:image" content="assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Hold Up dengan tulisan: Ambil jeda sebelum checkout">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>if (window.tailwind) tailwind.config = { corePlugins: { preflight: false } };</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/teman-jeda.css">
+</head>
+
+<body class="footer-page">
+    <a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+    <div class="grid-red footer-page-content">
+        <header class="top">
+            <a class="logo" href="index.html" aria-label="Hold Up, kembali ke beranda">
+                <img src="assets/logo/1.webp" width="848" height="405" alt="">
+                <img src="assets/logo/2.webp" width="688" height="448" alt="">
+                <img src="assets/logo/3.webp" width="488" height="425" alt="">
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Menu utama">
+                <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-list">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                    Menu
+                </button>
+                <ul class="site-nav__list" id="site-nav-list">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa Impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi Jeda</a></li>
+                    <li><a href="quiz.html">Kuis Pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html" aria-current="page">Teman Jeda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="utama" tabindex="-1">
+
+            <section class="card enter" aria-labelledby="judul">
+                <span class="eyebrow">Teman Jeda</span>
+                <h1 id="judul" class="title">Ngobrol dulu sebelum checkout</h1>
+                <p class="lead">Lagi pengen beli sesuatu, atau baru saja menyesal? Ceritakan ke Teman Jeda. Dia akan
+                    menemanimu berhenti sebentar dan menimbang ulang, tanpa menghakimi.</p>
+                <ul class="facts">
+                    <li>Simulasi, bukan AI sungguhan</li>
+                    <li>Semua jawaban ditulis tim HoldUp</li>
+                    <li>Ketikanmu tidak dikirim ke mana pun</li>
+                </ul>
+
+                <div class="chat">
+                    <div class="chat__head">
+                        <span class="chat__avatar" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M10 9v6M14 9v6" />
+                            </svg>
+                        </span>
+                        <div>
+                            <h2 class="chat__name" id="chat-nama">Teman Jeda</h2>
+                            <p class="chat__status" id="chat-status">Siap nemenin</p>
+                        </div>
+                        <span class="chat__badge">Simulasi</span>
+                    </div>
+
+                    <div class="chat__log" id="log" role="log" aria-labelledby="chat-nama" tabindex="0"></div>
+
+                    <div class="chat__choices" id="pilihan" role="group" aria-label="Pilihan balasan"></div>
+
+                    <form class="chat__form" id="form-chat" autocomplete="off">
+                        <label class="sr-only" for="ketik">Tulis pesan untuk Teman Jeda</label>
+                        <input id="ketik" type="text" maxlength="200" placeholder="Ketik pesanmu">
+                        <button type="submit" class="pill pill--red">Kirim</button>
+                    </form>
+                    <p class="chat__hint">Teman Jeda hanya paham soal belanja impulsif. Kalau tidak paham, dia akan
+                        menawarkan pilihan.</p>
+                </div>
+
+                <p class="note">Teman Jeda bukan psikolog atau konselor. Kalau perasaanmu berat dan tidak kunjung
+                    membaik, hubungi layanan konseling gratis Kementerian Kesehatan di 119 ekstensi 8 atau
+                    <a href="https://healing119.id">healing119.id</a>.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__logo" role="img" aria-label="Hold Up">
+            <img src="assets/logo/1.webp" width="848" height="405" alt="">
+            <img src="assets/logo/2.webp" width="688" height="448" alt="">
+            <img src="assets/logo/3.webp" width="488" height="425" alt="">
+        </div>
+        <div class="site-footer__bottom">
+            <nav class="site-footer__links" aria-label="Halaman Hold Up">
+                <ul class="site-footer__nav">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi jeda</a></li>
+                    <li><a href="quiz.html">Kuis pemicu</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html" aria-current="page">Teman Jeda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__copyright">Hold Up &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/teman-jeda.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

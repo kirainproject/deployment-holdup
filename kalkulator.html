@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Dampak | Hold Up</title>
+    <meta name="description" content="Ubah harga barang jadi waktu uang saku dan hal lain yang bisa kamu dapat dengan uang yang sama.">
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hold Up">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:title" content="Kalkulator Dampak | Hold Up">
+    <meta property="og:description" content="Ubah harga barang jadi waktu uang saku dan hal lain yang bisa kamu dapat dengan uang yang sama.">
+    <meta property="og:image" content="assets/images/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Hold Up dengan tulisan: Ambil jeda sebelum checkout">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>if (window.tailwind) tailwind.config = { corePlugins: { preflight: false } };</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/kalkulator.css">
+</head>
+
+<body class="footer-page">
+    <a class="skip-link" href="#utama">Lewati ke konten utama</a>
+
+    <div class="grid-red footer-page-content">
+        <header class="top">
+            <a class="logo" href="index.html" aria-label="Hold Up, kembali ke beranda">
+                <img src="assets/logo/1.webp" width="848" height="405" alt="">
+                <img src="assets/logo/2.webp" width="688" height="448" alt="">
+                <img src="assets/logo/3.webp" width="488" height="425" alt="">
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Menu utama">
+                <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-list">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                    Menu
+                </button>
+                <ul class="site-nav__list" id="site-nav-list">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa Impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi Jeda</a></li>
+                    <li><a href="quiz.html">Kuis Pemicu</a></li>
+                    <li><a href="kalkulator.html" aria-current="page">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="utama" tabindex="-1">
+
+            <section class="card enter" aria-labelledby="judul">
+                <span class="eyebrow">Kalkulator dampak</span>
+                <h1 id="judul" class="title">Harganya setara apa buat kamu?</h1>
+                <p class="lead">Angka harga jarang mengubah keputusan. Yang bikin mikir dua kali adalah melihat apa
+                    yang kamu lepas kalau uangnya dipakai sekarang.</p>
+
+                <form class="mt-8" id="form-kalkulator" novalidate>
+                    <div class="field">
+                        <label for="harga">Harga barang</label>
+                        <div class="money">
+                            <span aria-hidden="true">Rp</span>
+                            <input type="text" inputmode="numeric" id="harga" name="harga" autocomplete="off"
+                                maxlength="15" placeholder="850.000" aria-describedby="galat">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="saku">Uang saku per bulan (boleh dikosongkan)</label>
+                        <div class="money">
+                            <span aria-hidden="true">Rp</span>
+                            <input type="text" inputmode="numeric" id="saku" name="saku" autocomplete="off"
+                                maxlength="15" placeholder="600.000" aria-describedby="saku-note">
+                        </div>
+                        <p class="note" id="saku-note">Dipakai untuk mengubah harga jadi satuan waktu. Cuma disimpan di
+                            browser kamu.</p>
+                    </div>
+                    <p class="hint" id="galat" role="alert"></p>
+                    <button type="submit" class="pill pill--red mt-2">
+                        Hitung dampaknya
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </form>
+            </section>
+
+            <section id="hasil" class="card mt-8" aria-labelledby="hasil-title" hidden>
+                <div class="result-head text-center">
+                    <span class="eyebrow">Hasil hitunganmu</span>
+                    <h2 id="hasil-title" tabindex="-1">Untuk barang seharga</h2>
+                    <p class="price" id="out-harga"></p>
+                </div>
+
+                <div class="box">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#DC1928" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3 2" />
+                        </svg>
+                        Setara waktu
+                    </h3>
+                    <p class="big" id="out-waktu"></p>
+                    <div class="bar__track" id="out-bar" aria-hidden="true">
+                        <div class="bar__fill" id="out-fill"></div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E6A817" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M17 3l4 4-4 4M3 7h18M7 21l-4-4 4-4M21 17H3" />
+                        </svg>
+                        Uang yang sama bisa jadi
+                    </h3>
+                    <p class="big" id="out-kalimat"></p>
+                    <ul class="alts" id="out-alts"></ul>
+                    <p class="note">Harga pembanding perkiraan kasar, bukan hasil survei. Ganti di kepalamu dengan
+                        harga yang kamu kenal.</p>
+                </div>
+
+                <p class="closing">Ini gambaran, keputusan tetap di tangan kamu.</p>
+
+                <div class="result-actions">
+                    <button type="button" class="pill" id="ulang">Hitung barang lain</button>
+                    <a class="pill pill--red" href="quiz.html">Kenali pemicumu</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__logo" role="img" aria-label="Hold Up">
+            <img src="assets/logo/1.webp" width="848" height="405" alt="">
+            <img src="assets/logo/2.webp" width="688" height="448" alt="">
+            <img src="assets/logo/3.webp" width="488" height="425" alt="">
+        </div>
+        <div class="site-footer__bottom">
+            <nav class="site-footer__links" aria-label="Halaman Hold Up">
+                <ul class="site-footer__nav">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="kenapa.html">Kenapa impulsif</a></li>
+                    <li><a href="simulasi.html">Simulasi jeda</a></li>
+                    <li><a href="quiz.html">Kuis pemicu</a></li>
+                    <li><a href="kalkulator.html" aria-current="page">Kalkulator</a></li>
+                    <li><a href="teman-jeda.html">Teman Jeda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__copyright">Hold Up &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/kalkulator.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

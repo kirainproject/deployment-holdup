@@ -1,0 +1,230 @@
+.card+.card {
+    margin-top: 32px;
+}
+
+.text-input,
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: white;
+    border: 3px solid var(--dark-border);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 var(--dark-border);
+    font: 700 1.1rem/1.4 'Plus Jakarta Sans', sans-serif;
+    color: var(--brown);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+    font-weight: 600;
+}
+
+.text-input[aria-invalid="true"] {
+    background: #fde8e9;
+}
+
+fieldset {
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+}
+
+legend {
+    margin-bottom: 10px;
+    padding: 0;
+    font-weight: 800;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chips input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.chips label {
+    display: inline-block;
+    padding: 10px 18px;
+    background: white;
+    border: 2px solid var(--dark-border);
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 var(--dark-border);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.chips input:checked+label {
+    background: var(--red);
+    color: white;
+}
+
+.chips input:focus-visible+label {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+.stage h1:focus,
+.stage h2:focus,
+#jurnal-title:focus {
+    outline: none;
+}
+
+.count {
+    margin: 12px 0 4px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: clamp(4.5rem, 18vw, 8rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--red);
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.flip {
+    margin-top: 14px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.question {
+    display: block;
+    font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.item-recap {
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.journal {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.journal li {
+    padding: 16px 18px;
+    background: var(--paper);
+    border: 2px dashed var(--wine);
+    border-radius: 16px;
+    overflow-wrap: anywhere;
+}
+
+.journal .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+}
+
+.journal .meta {
+    margin-top: 6px;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.journal .ask {
+    margin: 12px 0 10px;
+    font-weight: 700;
+}
+
+.journal .ask-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    padding: 4px 12px;
+    border: 2px solid var(--dark-border);
+    border-radius: 999px;
+    background: white;
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.tag--batal {
+    background: var(--yellow);
+}
+
+.pill--small {
+    min-height: 40px;
+    padding: 8px 18px;
+    font-size: .95rem;
+}
+
+details {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: white;
+    border: 3px solid var(--dark-border);
+    border-radius: 20px;
+}
+
+summary {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+details .tips {
+    margin-top: 14px;
+}
+
+.chips input:checked+label {
+    background: var(--slate);
+    color: white;
+}
+
+.bar__track {
+    max-width: 420px;
+    height: 18px;
+    margin: 14px auto 0;
+    background: white;
+    border: 3px solid var(--dark-border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+#isi-jeda {
+    height: 100%;
+    width: 0;
+    background: var(--yellow);
+    transition: width .25s linear;
+}
+
+#nama-barang {
+    max-width: 480px;
+}
+
+details {
+    padding: 0;
+}
+
+summary {
+    padding: 16px 20px;
+}
+
+details .tips {
+    margin: 0;
+    padding: 0 20px 20px 40px;
+}
+
+details > .note {
+    margin: 0;
+    padding: 0 20px 20px;
+}

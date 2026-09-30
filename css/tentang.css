@@ -1,0 +1,78 @@
+.article {
+    max-width: 760px;
+}
+
+.article h2 {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 3px dashed rgba(133, 37, 32, .35);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--red);
+}
+
+.article p,
+.article li {
+    max-width: 64ch;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.article p {
+    margin-top: 14px;
+}
+
+.article a:not(.pill) {
+    color: var(--wine);
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.article sup a {
+    text-decoration: none;
+}
+
+.fitur {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.fitur li {
+    max-width: none;
+    padding: 14px 18px;
+    background: white;
+    border: 2px dashed var(--wine);
+    border-radius: 16px;
+}
+
+.refs {
+    margin: 16px 0 0;
+    padding-left: 1.4em;
+}
+
+.article .refs li {
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.article .refs a {
+    color: inherit;
+    font-weight: 600;
+}
+
+.eyebrow {
+    background: white;
+    color: var(--red);
+}
+
+.result-actions {
+    justify-content: flex-start;
+    margin-top: 20px;
+}
