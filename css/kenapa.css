@@ -304,6 +304,9 @@
 
     .toc summary {
         cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .toc summary::after {
