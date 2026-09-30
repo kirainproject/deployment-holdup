@@ -27,18 +27,26 @@ const $ = (id) => document.getElementById(id);
 const form = $('form-kalkulator'), hasil = $('hasil'), galat = $('galat');
 const inHarga = $('harga'), inSaku = $('saku');
 
-const rapikan = (inp) => {
+const rapikan = (e) => {
+    const inp = e.target;
+    const cursor = inp.selectionStart;
+    const oldLen = inp.value.length;
     const n = keAngka(inp.value);
     if (!isNaN(n)) {
         inp.value = n.toLocaleString('id-ID');
+        const newLen = inp.value.length;
+        inp.setSelectionRange(cursor + (newLen - oldLen), cursor + (newLen - oldLen));
     } else if (inp.value.replace(/\D/g, '') === '') {
         inp.value = '';
     }
 };
-[inHarga, inSaku].forEach(inp => inp.addEventListener('input', () => rapikan(inp)));
+[inHarga, inSaku].forEach(inp => inp.addEventListener('input', rapikan));
 
 inSaku.value = ambil(KUNCI.saku, '');
-if (inSaku.value) rapikan(inSaku);
+if (inSaku.value) {
+    const evt = { target: inSaku };
+    rapikan(evt);
+}
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();

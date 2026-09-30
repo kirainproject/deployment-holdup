@@ -108,6 +108,12 @@
                             <label for="pm-urgency">Promonya mau habis</label>
                             <input type="radio" name="pemicu" id="pm-mood" value="mood">
                             <label for="pm-mood">Lagi butuh hiburan</label>
+                            <input type="radio" name="pemicu" id="pm-lainnya" value="lainnya">
+                            <label for="pm-lainnya">Lainnya</label>
+                        </div>
+                        <div class="field mt-3" id="wrap-lainnya" hidden>
+                            <label for="pemicu-lainnya" class="sr-only">Alasan lainnya</label>
+                            <input type="text" class="text-input" id="pemicu-lainnya" name="pemicu_lainnya" autocomplete="off" maxlength="40" placeholder="Tulis alasanmu di sini...">
                         </div>
                         <p class="note" id="pemicu-note" hidden>Dipilihkan dari hasil kuis pemicumu. Boleh diganti.</p>
                     </fieldset>

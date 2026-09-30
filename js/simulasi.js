@@ -54,7 +54,21 @@ if (hasilKuis && hasilKuis.kategori in NAMA_PEMICU) {
 form.skenario.forEach(r => r.addEventListener('change', () => {
     [inNama.placeholder, inHarga.placeholder] = CONTOH[r.value];
 }));
-inHarga.addEventListener('blur', () => { const n = keAngka(inHarga.value); if (!isNaN(n)) inHarga.value = n.toLocaleString('id-ID'); });
+form.pemicu.forEach(r => r.addEventListener('change', () => {
+    $('wrap-lainnya').hidden = form.pemicu.value !== 'lainnya';
+}));
+inHarga.addEventListener('input', (e) => { 
+    const cursor = e.target.selectionStart;
+    const oldLen = e.target.value.length;
+    const n = keAngka(inHarga.value); 
+    if (!isNaN(n)) {
+        inHarga.value = n.toLocaleString('id-ID'); 
+        const newLen = inHarga.value.length;
+        e.target.setSelectionRange(cursor + (newLen - oldLen), cursor + (newLen - oldLen));
+    } else if (inHarga.value.replace(/\D/g, '') === '') {
+        inHarga.value = '';
+    }
+});
 
 const tampil = (tahap) => {
     [awal, jeda].forEach(t => { t.hidden = t !== tahap; });
@@ -101,7 +115,7 @@ const mulaiJeda = () => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const nama = inNama.value.trim(), harga = keAngka(inHarga.value);
-    [inNama, inHarga].forEach(i => i.removeAttribute('aria-invalid'));
+    [inNama, inHarga, $('pemicu-lainnya')].forEach(i => { if (i) i.removeAttribute('aria-invalid'); });
     if (!nama) {
         galat.textContent = 'Tulis dulu barang yang kamu incar, supaya bisa dicatat kalau kamu menundanya.';
         inNama.setAttribute('aria-invalid', 'true');
@@ -112,9 +126,21 @@ form.addEventListener('submit', (e) => {
         inHarga.setAttribute('aria-invalid', 'true');
         return inHarga.focus();
     }
+    
+    let pemicuValue = form.pemicu.value;
+    if (pemicuValue === 'lainnya') {
+        const text = $('pemicu-lainnya').value.trim();
+        if (!text) {
+            galat.textContent = 'Tuliskan alasan lainnya sebelum melanjutkan.';
+            $('pemicu-lainnya').setAttribute('aria-invalid', 'true');
+            return $('pemicu-lainnya').focus();
+        }
+        pemicuValue = text;
+    }
+
     galat.textContent = '';
     $('pesan-akhir').textContent = '';
-    entri = { nama, harga, kategori: form.pemicu.value, skenario: form.skenario.value };
+    entri = { nama, harga, kategori: pemicuValue, skenario: form.skenario.value };
     $('ringkas-barang').textContent = `${nama} (${rupiah.format(harga)})`;
     mulaiJeda();
 });
@@ -122,6 +148,7 @@ form.addEventListener('submit', (e) => {
 const selesai = (pesan) => {
     entri = null;
     form.reset();
+    $('wrap-lainnya').hidden = true;
     if (hasilKuis && hasilKuis.kategori in NAMA_PEMICU) $('pm-' + hasilKuis.kategori).checked = true;
     $('pesan-akhir').textContent = pesan;
     tampil(awal);
