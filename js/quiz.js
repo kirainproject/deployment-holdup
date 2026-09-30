@@ -80,7 +80,7 @@ PERTANYAAN.forEach(([, teks], i) => {
     fs.tabIndex = -1;
 
     const lg = document.createElement('legend');
-    lg.className = 'sr-only'; // visually hidden for screen readers
+    lg.className = 'sr-only';
     const lgText = 'Dalam 3 bulan terakhir, seberapa sering ' + teks;
     lg.textContent = lgText;
     fs.appendChild(lg);
@@ -102,7 +102,7 @@ PERTANYAAN.forEach(([, teks], i) => {
     grid.appendChild(leftCol);
 
     const rightCol = document.createElement('div');
-    rightCol.className = 'flex flex-col gap-3'; // replaces .option margin-bottom
+    rightCol.className = 'flex flex-col gap-3';
 
     SKALA.forEach((label, nilai) => {
         const wrap = document.createElement('div');
