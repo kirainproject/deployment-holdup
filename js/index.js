@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navItems.forEach(a => a === item ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current'));
     }
 
-    function movePill(item) {
+    function movePill(item, autoScrollContainer = false) {
         const width = item.offsetWidth;
         const left = item.offsetLeft;
         const height = item.offsetHeight;
@@ -147,22 +147,24 @@ document.addEventListener('DOMContentLoaded', () => {
         pill.style.height = `${height}px`;
         pill.style.transform = `translateX(${left}px)`;
 
-        navContainer.scrollTo({ left: left - (navContainer.clientWidth - width) / 2, behavior: 'smooth' });
+        if (autoScrollContainer) {
+            navContainer.scrollTo({ left: left - (navContainer.clientWidth - width) / 2, behavior: 'smooth' });
+        }
     }
 
-    setTimeout(() => movePill(currentActiveItem), 100);
+    setTimeout(() => movePill(currentActiveItem, true), 100);
 
     navItems.forEach(item => {
-        item.addEventListener('mouseenter', () => movePill(item));
+        item.addEventListener('mouseenter', () => movePill(item, false));
         item.addEventListener('click', (e) => {
             currentActiveItem = item;
             tandaiAktif(item);
-            movePill(item);
+            movePill(item, true);
         });
     });
 
-    navContainer.addEventListener('mouseleave', () => movePill(currentActiveItem));
-    window.addEventListener('resize', () => movePill(currentActiveItem));
+    navContainer.addEventListener('mouseleave', () => movePill(currentActiveItem, false));
+    window.addEventListener('resize', () => movePill(currentActiveItem, true));
 
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -172,9 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (matchingLink) {
                     currentActiveItem = matchingLink;
                     tandaiAktif(matchingLink);
-                    if (!navContainer.matches(':hover')) {
-                        movePill(matchingLink);
-                    }
+                    movePill(matchingLink, true);
                 }
             }
         });
